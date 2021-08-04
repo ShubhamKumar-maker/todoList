@@ -1,0 +1,29 @@
+<h1>ToDo List</h1>
+<a routerLink="/Add">Add</a>
+<table>
+    <tr>
+        <th>Action</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+    </tr>
+    <ng-template ngFor let-item [ngForOf]="tasks" let-index="index">
+    <tr>
+        <td>
+                <tr>
+                    <td><button (click)="update(item)">update</button></td>
+                    <td><button (click)="delete(item)">delete</button></td>
+                </tr>
+        </td>
+        <td>{{item.firstName}}</td>
+        <td>{{item.lastName}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.address}}</td>
+    </tr>
+</ng-template>
+<div *ngIf="tasks.length < 1 ">
+    <p>list is empty, please add some Data</p>
+</div>
+
+</table>

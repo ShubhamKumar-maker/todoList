@@ -1,0 +1,18 @@
+<h1>Add ToDo Data</h1>
+<a routerLink="/Home">Home</a>
+<form [formGroup]="todoForm" (ngSubmit)="todoForm.valid && onSubmit()">
+
+    <label for="firstName">Enter First Name: </label>
+    <input id="firstName" type="text" formControlName="firstName">
+      
+    <label for="lastName">Enter Last Name: </label>
+    <input id="lastName" type="text" formControlName="lastName">
+
+    <label for="phone">Enter Phone No.: </label>
+    <input id="phone" type="number" formControlName="phone">
+
+    <label for="address">Enter Address: </label>
+    <input id="address" type="text" formControlName="address">
+
+    <input type="submit" value="Add" />
+  </form>
